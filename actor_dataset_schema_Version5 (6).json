@@ -1,0 +1,32 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "arxivId": { "type": "string", "description": "ArXiv identifier (e.g., 2301.01234)" },
+        "title": { "type": "string", "description": "Paper title" },
+        "authors": { "type": "array", "description": "Authors list" },
+        "abstract": { "type": "string", "description": "Abstract text" },
+        "published": { "type": "string", "description": "Submission date (as shown on arXiv)" },
+        "pdfUrl": { "type": "string", "description": "Direct PDF URL" },
+        "pdfKey": { "type": "string", "description": "Key in Key-Value store where PDF is stored (if downloaded)" },
+        "keyFindings": { "type": "array", "description": "Extracted key findings / bullet points" },
+        "pageUrl": { "type": "string", "description": "ArXiv abstract page URL" },
+        "timestamp": { "type": "string", "description": "When the item was collected (ISO 8601)" }
+    },
+    "views": {
+        "overview": {
+            "title": "Papers Overview",
+            "transformation": {
+                "fields": ["arxivId", "title", "authors", "published"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "arxivId": { "label": "ArXiv ID", "format": "link" },
+                    "title": { "label": "Title", "format": "text" },
+                    "authors": { "label": "Authors", "format": "array" },
+                    "published": { "label": "Published", "format": "text" }
+                }
+            }
+        }
+    }
+}

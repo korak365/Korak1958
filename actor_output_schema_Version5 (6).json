@@ -1,0 +1,21 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output of ArXiv Research Synthesizer",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Papers Dataset",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "itemCount": {
+            "type": "number",
+            "title": "Total papers collected",
+            "template": "{{run.usageInfo.items}}"
+        },
+        "pdfsSaved": {
+            "type": "number",
+            "title": "PDF files saved to Key-Value store",
+            "template": "{{run.usageInfo.keyValueStoreEntries}}"
+        }
+    }
+}

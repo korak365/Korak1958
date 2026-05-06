@@ -1,0 +1,30 @@
+{
+    "name": "arxiv-research-synthesizer",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "Scrapes new AI papers from arXiv, downloads PDFs, and extracts key findings into JSON.",
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.4.2",
+        "crawlee": "^3.13.8",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "@apify/eslint-config": "^1.0.0",
+        "eslint": "^9.29.0",
+        "eslint-config-prettier": "^10.1.5",
+        "prettier": "^3.5.3"
+    },
+    "scripts": {
+        "start": "node src/main.js",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "test": "echo 'Error: oops, the Actor has no tests yet, sad!' && exit 1"
+    },
+    "author": "ArXiv Research Synthesizer",
+    "license": "ISC"
+}
